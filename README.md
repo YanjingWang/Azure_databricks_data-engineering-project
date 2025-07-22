@@ -1,4 +1,5 @@
 # Azure End-to-End Data Engineering Real-Time Project
+
 This project is a data engineering pipeline solution to a made-up business problem, created to aid in my learning and understanding of data pipelining.
 
 ## Project Overview
@@ -9,6 +10,8 @@ This project addresses a critical business need by building a comprehensive data
 
 The business has identified a gap in understanding customer demographics—specifically gender distribution—and how it influences product purchases. The key requirements include:
 
+![Earthquake Data Pipeline](pics/earthquake_data_pipeline.png)
+
 1. **Sales by Gender and Product Category**: A dashboard showing the total products sold, total sales revenue, and a gender split among customers.
 2. **Data Filtering**: Ability to filter the data by product category, gender, and date.
 3. **User-Friendly Interface**: Stakeholders should have access to an easy-to-use interface for making queries.
@@ -17,20 +20,23 @@ The business has identified a gap in understanding customer demographics—speci
 
 To meet these requirements, the solution is broken down into the following components:
 
-1. **Data Ingestion**: 
-    - Extract customer and sales data from an on-premises SQL database.
-    - Load the data into Azure Data Lake Storage (ADLS) using Azure Data Factory (ADF).
+![Earthquake Data Pipeline](pics/workflow.png)
 
+1. **Data Ingestion**:
+
+   - Extract customer and sales data from an on-premises SQL database.
+   - Load the data into Azure Data Lake Storage (ADLS) using Azure Data Factory (ADF).
 2. **Data Transformation**:
-    - Use Azure Databricks to clean and transform the data.
-    - Organize the data into Bronze, Silver, and Gold layers for raw, cleansed, and aggregated data respectively.
 
+   - Use Azure Databricks to clean and transform the data.
+   - Organize the data into Bronze, Silver, and Gold layers for raw, cleansed, and aggregated data respectively.
 3. **Data Loading and Reporting**:
-    - Load the transformed data into Azure Synapse Analytics.
-    - Build a Power BI dashboard to visualize the data, allowing stakeholders to explore sales and demographic insights.
 
+   - Load the transformed data into Azure Synapse Analytics.
+   - Build a Power BI dashboard to visualize the data, allowing stakeholders to explore sales and demographic insights.
 4. **Automation**:
-    - Schedule the pipeline to run daily, ensuring that the data and reports are always up-to-date.
+
+   - Schedule the pipeline to run daily, ensuring that the data and reports are always up-to-date.
 
 ## Technology Stack
 
